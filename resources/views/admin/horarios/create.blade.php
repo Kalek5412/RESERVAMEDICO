@@ -28,11 +28,11 @@
                                         <script>
                                             $('#consultorio_select').on('change',function(){
                                               var consultorio_id=$('#consultorio_select').val();
-                                              var url="{{route('admin.horarios.datosConsultorio',':id')}}";
-                                              url=url.replace(':id',consultorio_id);
+                                       /*        var url="{{route('admin.horarios.datosConsultorio',':id')}}";
+                                              url=url.replace(':id',consultorio_id); */
                                               if(consultorio_id){
                                                 $.ajax({
-                                                  url:url,
+                                                  url:"{{url('/admin/horarios/consultorios/')}}"+'/'+consultorio_id,
                                                   type:'GET',
                                                   success:function(data){
                                                     $('#consultorio_info').html(data);

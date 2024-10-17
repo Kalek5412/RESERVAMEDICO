@@ -2,14 +2,14 @@
 <table class="table  table-striped table-sm table-hover table-bordered">
     <thead>
       <tr>
-        <th>hira</th>
-        <th>lunes</th>
-        <th>martes</th>
-        <th>meircoles</th>
-        <th>jueves</th>
-        <th>vierens</th>
-        <th>sabado</th>
-        <th>domingo</th>
+        <th>Hora</th>
+        <th>LUNES</th>
+        <th>MARTES</th>
+        <th>MIERCOLES</th>
+        <th>JUEVES</th>
+        <th>VIERNES</th>
+        <th>SABADO</th>
+        <th>DOMINGO</th>
       </tr>
     </thead>
     <tbody>

@@ -127,7 +127,7 @@
                 Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
               </p>
               <div class="text-center">
-                <a href="#about" class="more-btn"><span>Reserva Aqui</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="{{url('admin')}}" class="more-btn"><span>Reserva Aqui</span> <i class="bi bi-chevron-right"></i></a>
               </div>
             </div>
           </div><!-- End Why Box -->
@@ -202,11 +202,12 @@
                 <script>
                   $('#consultorio_select').on('change',function(){
                     var consultorio_id=$('#consultorio_select').val();
-                    var url="{{route('datosConsultorio',':id')}}";
-                    url=url.replace(':id',consultorio_id);
+              /*       var url="{{route('datosConsultorio',':id')}}";
+                    url=url.replace(':id',consultorio_id); */
                     if(consultorio_id){
                       $.ajax({
-                        url:url,
+                        //url:url,
+                        url:"{{url('/consultorios/')}}"+'/'+consultorio_id,
                         type:'GET',
                         success:function(data){
                           $('#consultorio_info').html(data);

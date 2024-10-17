@@ -49,7 +49,13 @@ class User extends Authenticatable
         return $this->hasMany(Secretaria::class);
     }
 
-    public function doctores(){
+    public function doctor(){
         return $this->hasOne(Doctor::class);
     }
+
+    public function events(){
+        return $this->hasMany(Event::class);
+    }
+
+  
 }

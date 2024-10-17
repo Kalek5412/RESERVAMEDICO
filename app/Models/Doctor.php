@@ -9,8 +9,6 @@ class Doctor extends Model
 {
     use HasFactory;
 
- 
-
     protected $fillable =['nombres','apellidos','telefono','licencia_medica','especialidad','user_id'];
 
     public function user(){
@@ -21,7 +19,11 @@ class Doctor extends Model
         return $this->belongsTo(Consultorio::class);
     }
     
-    public function horario(){
+    public function horarios(){
         return $this->hasMany(Horario::class);
+    }
+
+    public function events(){
+        return $this->hasMany(Event::class);
     }
 }

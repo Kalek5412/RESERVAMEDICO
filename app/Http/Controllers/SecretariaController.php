@@ -57,6 +57,9 @@ class SecretariaController extends Controller
         $secretaria->fecha_nacimiento=$request->fecha_nacimiento;
         $secretaria->direccion=$request->direccion;
         $secretaria->save();
+
+        $usuario->assignRole('secretaria');
+        
         return redirect()-> route('admin.secretarias.index')
         ->with('msj','se registro correctamente!');
 

@@ -55,6 +55,9 @@ class DoctorController extends Controller
         $doctor->licencia_medica=$request->licencia_medica;
         $doctor->especialidad=$request->especialidad;
         $doctor->save();
+
+        $usuario->assignRole('doctor');
+
         return redirect()-> route('admin.doctores.index')
         ->with('msj','se registro correctamente!');
     }
